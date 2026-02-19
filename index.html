@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lokaconvert - All in One Image Conversion & Optimizer Tool</title>
@@ -9,18 +10,111 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Lokaconvert - AIO Image Conversion & Optimizer</h1>
-            <p>Advanced batch image processing with advanced optimization, enhancement, and conversion tools</p>
+    <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <div class="navbar-left">
+            <button class="sidebar-toggle" id="sidebarToggle" title="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a href="#" class="navbar-brand">
+                <i class="fas fa-sync-alt brand-icon"></i>
+                <span>Lokaconvert</span>
+            </a>
         </div>
-        <div class="option-item">
-            <label for="darkModeToggle">Dark Mode</label>
-            <label class="toggle-switch">
-                <input type="checkbox" id="darkModeToggle">
-                <span class="slider"></span>
-            </label>
+        <div class="navbar-center">
+            <span class="navbar-tagline">All-in-One Image Conversion & Optimizer</span>
         </div>
+        <div class="navbar-right">
+            <div class="navbar-item">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="dark-mode-label"><i class="fas fa-moon"></i></span>
+            </div>
+            <a href="#" class="navbar-btn" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Side Menu -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-sync-alt sidebar-logo"></i>
+            <span class="sidebar-title">Lokaconvert</span>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="sidebar-menu-item active">
+                    <a href="#">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Convert</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#">
+                        <i class="fas fa-compress-arrows-alt"></i>
+                        <span>Compress</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#">
+                        <i class="fas fa-crop-alt"></i>
+                        <span>Resize</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#">
+                        <i class="fas fa-magic"></i>
+                        <span>Enhance</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#">
+                        <i class="fas fa-tint"></i>
+                        <span>Watermark</span>
+                    </a>
+                </li>
+                <li class="sidebar-divider"></li>
+                <li class="sidebar-menu-item">
+                    <a href="#">
+                        <i class="fas fa-history"></i>
+                        <span>History</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a href="#">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="sidebar-stats">
+                <i class="fas fa-bolt"></i>
+                <span>Unlimited images/batch</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <div class="container">
+            <div class="header">
+                <h1>Lokaconvert - AIO Image Conversion & Optimizer</h1>
+                <p>Advanced batch image processing with advanced optimization, enhancement, and conversion tools</p>
+            </div>
         <div class="tool-container">
             <div class="upload-section" id="dropArea">
                 <i class="fas fa-cloud-upload-alt upload-icon"></i>
@@ -316,16 +410,66 @@
         </div>
     </div>
 
-    <div class="limit-notice" id="limitNotice">
+    <div class="limit-notice" id="limitNotice" style="display:none;">
         <button class="close-notice" id="closeNotice"><i class="fas fa-times"></i></button>
-        <strong>Limit Reached!</strong>
-        <p>You can only convert 10 images at a time. Please process these first or contact us for premium options.</p>
     </div>
 
     <div class="toast" id="toast">
         <i class="fas fa-check-circle"></i>
         <span id="toastMessage">Operation completed successfully</span>
     </div>
+
+        </div> <!-- /.container -->
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-sync-alt"></i>
+                        <span>Lokaconvert</span>
+                    </div>
+                    <p class="footer-description">All-in-one image conversion and optimization tool. Process images directly in your browser with zero uploads.</p>
+                    <div class="footer-social">
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="#">Image Converter</a></li>
+                        <li><a href="#">Image Compressor</a></li>
+                        <li><a href="#">Image Resizer</a></li>
+                        <li><a href="#">Watermark Tool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Formats</h4>
+                    <ul>
+                        <li><a href="#">JPG / JPEG</a></li>
+                        <li><a href="#">PNG</a></li>
+                        <li><a href="#">WEBP</a></li>
+                        <li><a href="#">SVG / ICO</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lokaconvert. All rights reserved. Made with <i class="fas fa-heart" style="color: #ff7675;"></i> — 100% client-side processing.</p>
+            </div>
+        </footer>
+    </div> <!-- /.main-content -->
+
     <!-- Include JSZip library for ZIP functionality -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
